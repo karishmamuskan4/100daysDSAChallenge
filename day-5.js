@@ -46,7 +46,7 @@ let newStudent = "Aarav";
 ✅ Output:
 
 ["Ali", "John", "Sara", "Aarav"]
-/*
+*/
 //1st 
 const phonenumber=[
   '+918296393767',
