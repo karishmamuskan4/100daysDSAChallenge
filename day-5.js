@@ -1,41 +1,6 @@
 //day5
-
-//1st 
-const phonenumber=[
-  '+918296393767',
-  '+14085551234',
-  '+919748479374',
-  '+16484648478',
-  '+917393638398',
-  '+17484697487'
-];
-indiannumbers=phonenumber.filter((num)=>{
- return num.startsWith('+91')
-}
-)
-console.log(indiannumbers);
-foreignnumbers=phonenumber.filter((num)=>{
-  return num.startsWith('+1');
-} )
-console.log(foreignnumbers);
-
-
-//2nd 
-let cart =[101,102,104];
-cart.splice(2,0,103);
-console.log(cart);
-
-
-//3rd
-let waitinglist=['ali','john','sara'];
-let newstudent='aarav';
-waitinglist.push(newstudent);
-console.log(waitinglist);
-
-
-
-
-*/ Problem 1: Separate Phone Numbers
+/*
+Problem 1: Separate Phone Numbers
 
 Problem:
 You are given an array of phone numbers. Some are Indian numbers (+91 format) and others are US numbers (+1 format). Write a function to separate them into two different arrays.
@@ -81,4 +46,35 @@ let newStudent = "Aarav";
 ✅ Output:
 
 ["Ali", "John", "Sara", "Aarav"]
-*/
+/*
+//1st 
+const phonenumber=[
+  '+918296393767',
+  '+14085551234',
+  '+919748479374',
+  '+16484648478',
+  '+917393638398',
+  '+17484697487'
+];
+indiannumbers=phonenumber.filter((num)=>{
+ return num.startsWith('+91')
+}
+)
+console.log(indiannumbers);
+foreignnumbers=phonenumber.filter((num)=>{
+  return num.startsWith('+1');
+} )
+console.log(foreignnumbers);
+
+
+//2nd 
+let cart =[101,102,104];
+cart.splice(2,0,103);
+console.log(cart);
+
+
+//3rd
+let waitinglist=['ali','john','sara'];
+let newstudent='aarav';
+waitinglist.push(newstudent);
+console.log(waitinglist);
