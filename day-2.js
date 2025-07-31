@@ -76,12 +76,12 @@ let orders = [
  
  //2nd answer
  let userss = ['ali','sara','zoya','ali','sara','zara'];
- let u;
- let dub = userss.filter((val,index)=>{
-   u= userss.indexOf(val)!== userss.lastIndexOf(val)&& userss.indexOf(val)==index;
-   return u;
+ let user;
+ let duplicate = userss.filter((val,index)=>{
+   user= userss.indexOf(val)!== userss.lastIndexOf(val)&& userss.indexOf(val)==index;
+   return user;
  })
- console.log(dub);
+ console.log(duplicate);
  
  //3rd answer
  let orders = [
