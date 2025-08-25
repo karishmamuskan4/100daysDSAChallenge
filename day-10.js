@@ -22,34 +22,24 @@ userB = [[10, 12], [14, 16], [17, 18]]
 [18, 20] and [17, 18] touch → merged into [17, 20]
 */
 
-function mergeSchedules(userA, userB) {
-  // Step 1: Merge both arrays
-  let all = [...userA, ...userB];
-
-  // Step 2: Sort by start time
-  all.sort((a, b) => a[0] - b[0]);
-
-  // Step 3: Merge intervals
-  let merged = [all[0]]; // start with first interval
-
-  for (let i = 1; i < all.length; i++) {
-    let last = merged[merged.length - 1]; // last interval in merged
-    let current = all[i];
-
-    if (current[0] <= last[1]) {
-      // Overlap or touch → merge
-      last[1] = Math.max(last[1], current[1]);
-    } else {
-      // No overlap → push new interval
-      merged.push(current);
-    }
+//day 10
+function mergeSchedule (userA,userB){
+  let intervals=[...userA,...userB]
+  let start=0
+  let end=1
+  intervals=intervals.sort((a,b)=>a[0]-b[0])
+let previous=intervals[0];
+let result =[previous];
+for(let current of intervals){
+  if(current[start]<= previous[end]){
+    previous[end]=Math.max(previous[end], current[end])
   }
-
-  return merged;
+  else{
+    result.push(current);
+    previous=current;
+  }
+  
 }
-
-let userA = [[9, 11], [13, 15], [18, 20]];
-let userB = [[10, 12], [14, 16], [17, 18]];
-
-console.log(mergeSchedules(userA, userB));
-// Output: [ [ 9, 12 ], [ 13, 16 ], [ 17, 20 ] ]
+return result ;
+}
+console.log(mergeSch([[1,3],[6,9],[14,18]],[[2,4],[8,12],[16,20]]));
